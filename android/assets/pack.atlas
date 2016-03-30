@@ -11,42 +11,42 @@ background
   orig: 320, 480
   offset: 0, 0
   index: -1
-buttom_cancel
+button_cancel
   rotate: false
   xy: 906, 440
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: -1
-buttom_left
+button_left
   rotate: false
   xy: 906, 374
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: -1
-buttom_pause
+button_pause
   rotate: false
   xy: 906, 308
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: -1
-buttom_right
+button_right
   rotate: false
   xy: 776, 32
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: -1
-buttom_sound
+button_sound
   rotate: false
   xy: 842, 32
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: -1
-buttom_sound_off
+button_sound_off
   rotate: false
   xy: 908, 32
   size: 64, 64
