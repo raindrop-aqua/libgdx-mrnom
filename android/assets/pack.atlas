@@ -4,254 +4,261 @@ size: 1024,512
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
+background
+  rotate: false
+  xy: 2, 24
+  size: 320, 480
+  orig: 320, 480
+  offset: 0, 0
+  index: -1
 buttom_cancel
   rotate: false
-  xy: 454, 182
+  xy: 906, 440
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: -1
 buttom_left
   rotate: false
-  xy: 778, 390
+  xy: 906, 374
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: -1
 buttom_pause
   rotate: false
-  xy: 778, 324
+  xy: 906, 308
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: -1
 buttom_right
   rotate: false
-  xy: 844, 390
+  xy: 776, 32
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: -1
 buttom_sound
   rotate: false
-  xy: 844, 324
+  xy: 842, 32
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: -1
 buttom_sound_off
   rotate: false
-  xy: 520, 182
+  xy: 908, 32
   size: 64, 64
   orig: 64, 64
   offset: 0, 0
   index: -1
 help1
   rotate: false
-  xy: 2, 248
+  xy: 324, 248
   size: 192, 256
   orig: 192, 256
   offset: 0, 0
   index: -1
 help2
   rotate: false
-  xy: 196, 248
+  xy: 518, 248
   size: 192, 256
   orig: 192, 256
   offset: 0, 0
   index: -1
 help3
   rotate: false
-  xy: 390, 248
+  xy: 712, 248
   size: 192, 256
   orig: 192, 256
   offset: 0, 0
   index: -1
 label_gameover
   rotate: false
-  xy: 2, 36
+  xy: 324, 36
   size: 192, 48
   orig: 192, 48
   offset: 0, 0
   index: -1
 label_help
   rotate: false
-  xy: 260, 198
+  xy: 582, 100
   size: 192, 48
   orig: 192, 48
   offset: 0, 0
   index: -1
 label_highscore
   rotate: false
-  xy: 584, 358
+  xy: 582, 50
   size: 192, 48
   orig: 192, 48
   offset: 0, 0
   index: -1
 label_play
   rotate: false
-  xy: 778, 456
+  xy: 776, 198
   size: 192, 48
   orig: 192, 48
   offset: 0, 0
   index: -1
 label_quit
   rotate: false
-  xy: 260, 148
+  xy: 776, 148
   size: 192, 48
   orig: 192, 48
   offset: 0, 0
   index: -1
 label_ready
   rotate: false
-  xy: 584, 408
+  xy: 582, 150
   size: 192, 96
   orig: 192, 96
   offset: 0, 0
   index: -1
 label_resume
   rotate: false
-  xy: 584, 308
+  xy: 776, 98
   size: 192, 48
   orig: 192, 48
   offset: 0, 0
   index: -1
 logo
   rotate: false
-  xy: 2, 86
+  xy: 324, 86
   size: 256, 160
   orig: 256, 160
   offset: 0, 0
   index: -1
 nom_body
   rotate: false
-  xy: 2, 2
+  xy: 972, 384
   size: 32, 32
   orig: 32, 32
   offset: 0, 0
   index: -1
 nom_down
   rotate: false
-  xy: 196, 42
+  xy: 518, 42
   size: 42, 42
   orig: 42, 42
   offset: 0, 0
   index: -1
 nom_left
   rotate: false
-  xy: 972, 462
+  xy: 906, 264
   size: 42, 42
   orig: 42, 42
   offset: 0, 0
   index: -1
 nom_right
   rotate: false
-  xy: 260, 104
+  xy: 972, 462
   size: 42, 42
   orig: 42, 42
   offset: 0, 0
   index: -1
 nom_up
   rotate: false
-  xy: 910, 412
+  xy: 972, 418
   size: 42, 42
   orig: 42, 42
   offset: 0, 0
   index: -1
 number
   rotate: false
-  xy: 910, 378
+  xy: 950, 274
   size: 20, 32
   orig: 20, 32
   offset: 0, 0
   index: 0
 number
   rotate: false
-  xy: 36, 2
+  xy: 324, 2
   size: 20, 32
   orig: 20, 32
   offset: 0, 0
   index: 1
 number
   rotate: false
-  xy: 488, 148
+  xy: 346, 2
   size: 20, 32
   orig: 20, 32
   offset: 0, 0
   index: 2
 number
   rotate: false
-  xy: 618, 274
+  xy: 368, 2
   size: 20, 32
   orig: 20, 32
   offset: 0, 0
   index: 3
 number
   rotate: false
-  xy: 338, 114
+  xy: 390, 2
   size: 20, 32
   orig: 20, 32
   offset: 0, 0
   index: 4
 number
   rotate: false
-  xy: 910, 344
+  xy: 412, 2
   size: 20, 32
   orig: 20, 32
   offset: 0, 0
   index: 5
 number
   rotate: false
-  xy: 932, 378
+  xy: 434, 2
   size: 20, 32
   orig: 20, 32
   offset: 0, 0
   index: 6
 number
   rotate: false
-  xy: 58, 2
+  xy: 456, 2
   size: 20, 32
   orig: 20, 32
   offset: 0, 0
   index: 7
 number
   rotate: false
-  xy: 510, 148
+  xy: 478, 2
   size: 20, 32
   orig: 20, 32
   offset: 0, 0
   index: 8
 number
   rotate: false
-  xy: 640, 274
+  xy: 500, 2
   size: 20, 32
   orig: 20, 32
   offset: 0, 0
   index: 9
 number_p
   rotate: false
-  xy: 240, 52
+  xy: 562, 52
   size: 10, 32
   orig: 10, 32
   offset: 0, 0
   index: -1
 stain1
   rotate: false
-  xy: 454, 148
+  xy: 972, 350
   size: 32, 32
   orig: 32, 32
   offset: 0, 0
   index: -1
 stain2
   rotate: false
-  xy: 584, 274
+  xy: 972, 316
   size: 32, 32
   orig: 32, 32
   offset: 0, 0
   index: -1
 stain3
   rotate: false
-  xy: 304, 114
+  xy: 972, 282
   size: 32, 32
   orig: 32, 32
   offset: 0, 0
