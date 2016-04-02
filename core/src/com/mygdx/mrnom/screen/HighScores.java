@@ -11,6 +11,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.mygdx.mrnom.Assets;
 import com.mygdx.mrnom.MrNom;
+import com.mygdx.mrnom.Settings;
 
 public class HighScores extends ScreenAdapter {
 
@@ -39,6 +40,34 @@ public class HighScores extends ScreenAdapter {
             }
         });
         stage.addActor(button_left);
+
+        int y = 330;
+        for (int i = 0; i <Settings.highscores.length; i++) {
+            String line = "" + (i + 1) + ". " + Settings.highscores[i];
+            drawText(stage, line, 96, y);
+            y -= 50;
+        }
+    }
+
+    private void drawText(Stage stage, String line, int x, int y) {
+        for (char c : line.toCharArray()) {
+            Image image;
+            int srcWidth = 0;
+            if (c == ' ') {
+                x += 20;
+                continue;
+            } else if (c == '.') {
+                image = new Image(Assets.numbers.get(10));
+                srcWidth += 10;
+            } else {
+                int index = Integer.valueOf(String.valueOf(c)).intValue();
+                image = new Image(Assets.numbers.get(index));
+                srcWidth += 20;
+            }
+            image.setPosition(x, y);
+            stage.addActor(image);
+            x += srcWidth;
+        }
     }
 
     @Override
