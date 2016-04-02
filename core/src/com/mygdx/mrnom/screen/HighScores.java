@@ -42,7 +42,7 @@ public class HighScores extends ScreenAdapter {
         stage.addActor(button_left);
 
         int y = 330;
-        for (int i = 0; i <Settings.highscores.length; i++) {
+        for (int i = 0; i < Settings.highscores.length; i++) {
             String line = "" + (i + 1) + ". " + Settings.highscores[i];
             drawText(stage, line, 96, y);
             y -= 50;
@@ -58,11 +58,11 @@ public class HighScores extends ScreenAdapter {
                 continue;
             } else if (c == '.') {
                 image = new Image(Assets.numbers.get(10));
-                srcWidth += 10;
+                srcWidth += image.getWidth();
             } else {
-                int index = Integer.valueOf(String.valueOf(c)).intValue();
+                int index = Integer.parseInt("" + c);
                 image = new Image(Assets.numbers.get(index));
-                srcWidth += 20;
+                srcWidth += image.getWidth();
             }
             image.setPosition(x, y);
             stage.addActor(image);
