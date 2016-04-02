@@ -5,6 +5,9 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.mygdx.mrnom.screen.MainMenu;
 
+/**
+ * Mr.Nom game class and entry point.
+ */
 public class MrNom extends Game {
 
     public SpriteBatch batch;

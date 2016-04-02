@@ -15,6 +15,9 @@ import com.mygdx.mrnom.Assets;
 import com.mygdx.mrnom.MrNom;
 import com.mygdx.mrnom.Settings;
 
+/**
+ * Main menu screen
+ */
 public class MainMenu extends ScreenAdapter {
 
     private final Stage stage;

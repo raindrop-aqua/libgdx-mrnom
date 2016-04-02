@@ -13,6 +13,9 @@ import com.mygdx.mrnom.Assets;
 import com.mygdx.mrnom.MrNom;
 import com.mygdx.mrnom.Settings;
 
+/**
+ * High scores screen
+ */
 public class HighScores extends ScreenAdapter {
 
     private final Stage stage;

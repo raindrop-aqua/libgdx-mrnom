@@ -7,6 +7,9 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Game settings
+ */
 public class Settings {
 
     private static final String PREF_NAME = Settings.class.getPackage().getName() + ".xml";
@@ -14,7 +17,9 @@ public class Settings {
     private static final String KEY_SOUND_ENABLED = "soundEnabled";
     private static final String KEY_HIGH_SCORE = "highScore";
 
+    /** sound enable */
     public static boolean soundEnabled = true;
+    /** high scores */
     public static Integer[] highscores = new Integer[]{100, 80, 50, 30, 10};
 
 

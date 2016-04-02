@@ -12,6 +12,9 @@ import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.mygdx.mrnom.Assets;
 import com.mygdx.mrnom.MrNom;
 
+/**
+ * Help screen - page 3
+ */
 public class Help3 extends ScreenAdapter {
 
     private final Stage stage;
