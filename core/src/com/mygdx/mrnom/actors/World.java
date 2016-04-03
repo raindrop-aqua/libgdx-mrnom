@@ -1,4 +1,4 @@
-package com.mygdx.mrnom.models;
+package com.mygdx.mrnom.actors;
 
 import java.util.Random;
 

@@ -1,4 +1,4 @@
-package com.mygdx.mrnom.screen;
+package com.mygdx.mrnom.screens;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.ScreenAdapter;
@@ -9,7 +9,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.mygdx.mrnom.Assets;
 import com.mygdx.mrnom.MrNom;
-import com.mygdx.mrnom.models.World;
+import com.mygdx.mrnom.actors.World;
 
 /**
  * Game screen

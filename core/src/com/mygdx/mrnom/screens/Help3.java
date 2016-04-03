@@ -1,4 +1,4 @@
-package com.mygdx.mrnom.screen;
+package com.mygdx.mrnom.screens;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.ScreenAdapter;
