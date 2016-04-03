@@ -4,11 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Set;
+import com.badlogic.gdx.utils.Array;
 
 /**
  * Assets
@@ -48,7 +44,7 @@ public class Assets {
     public static AtlasRegion number_8;
     public static AtlasRegion number_9;
     public static AtlasRegion number_p;
-    public static List<AtlasRegion> numbers;
+    public static Array<AtlasRegion> numbers;
 
     public static AtlasRegion nom_body;
     public static AtlasRegion nom_down;
@@ -98,8 +94,8 @@ public class Assets {
         number_8 = atlas.findRegion("number", 8);
         number_9 = atlas.findRegion("number", 9);
         number_p = atlas.findRegion("number_p");
-        numbers = new ArrayList<AtlasRegion>(
-                Arrays.asList(new AtlasRegion[]{
+        numbers = new Array<AtlasRegion>(
+                new AtlasRegion[]{
                         number_0,
                         number_1,
                         number_2,
@@ -111,7 +107,7 @@ public class Assets {
                         number_8,
                         number_9,
                         number_p,
-                })
+                }
         );
 
         nom_body = atlas.findRegion("nom_body");

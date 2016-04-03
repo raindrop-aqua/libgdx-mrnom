@@ -2,10 +2,7 @@ package com.mygdx.mrnom;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Preferences;
-
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import com.badlogic.gdx.utils.Array;
 
 /**
  * Game settings
@@ -45,9 +42,10 @@ public class Settings {
     }
 
     public static void addScore(int score) {
-        List<Integer> list = Arrays.asList(highscores);
+        Array<Integer> list = new Array<Integer>(highscores);
         list.add(score);
-        Collections.sort(list);
-        highscores = list.subList(0, 4).toArray(new Integer[]{});
+        list.sort();
+        list.truncate(5);
+        highscores = list.toArray();
     }
 }
