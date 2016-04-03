@@ -3,7 +3,7 @@ package com.mygdx.mrnom;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.mygdx.mrnom.screens.MainMenu;
+import com.mygdx.mrnom.screens.MainMenuScreen;
 
 /**
  * Mr.Nom game class and entry point.
@@ -17,7 +17,7 @@ public class MrNom extends Game {
         batch = new SpriteBatch();
         Settings.load();
         Assets.load();
-        setScreen(new MainMenu(this));
+        setScreen(new MainMenuScreen(this));
     }
 
     @Override

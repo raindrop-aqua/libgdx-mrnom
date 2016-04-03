@@ -18,11 +18,11 @@ import com.mygdx.mrnom.Settings;
 /**
  * Main menu screen
  */
-public class MainMenu extends ScreenAdapter {
+public class MainMenuScreen extends ScreenAdapter {
 
     private final Stage stage;
 
-    public MainMenu(final MrNom game) {
+    public MainMenuScreen(final MrNom game) {
         final OrthographicCamera camera = new OrthographicCamera(320, 480);
         camera.setToOrtho(false, 320, 480);
         stage = new Stage(new FitViewport(320, 480, camera));
@@ -45,7 +45,7 @@ public class MainMenu extends ScreenAdapter {
         highscore.addListener(new ClickListener() {
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                game.setScreen(new HighScores(game));
+                game.setScreen(new HighScoresScreen(game));
                 return super.touchDown(event, x, y, pointer, button);
             }
         });
@@ -56,7 +56,7 @@ public class MainMenu extends ScreenAdapter {
         help.addListener(new ClickListener() {
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                game.setScreen(new Help1(game));
+                game.setScreen(new Help1Screen(game));
                 return super.touchDown(event, x, y, pointer, button);
             }
         });

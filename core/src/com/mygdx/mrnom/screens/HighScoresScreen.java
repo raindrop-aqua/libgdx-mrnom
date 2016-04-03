@@ -16,11 +16,11 @@ import com.mygdx.mrnom.Settings;
 /**
  * High scores screen
  */
-public class HighScores extends ScreenAdapter {
+public class HighScoresScreen extends ScreenAdapter {
 
     private final Stage stage;
 
-    public HighScores(final MrNom game) {
+    public HighScoresScreen(final MrNom game) {
         final OrthographicCamera camera = new OrthographicCamera(320, 480);
         camera.setToOrtho(false, 320, 480);
         stage = new Stage(new FitViewport(320, 480, camera));
@@ -39,7 +39,7 @@ public class HighScores extends ScreenAdapter {
         button_left.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
-                game.setScreen(new MainMenu(game));
+                game.setScreen(new MainMenuScreen(game));
             }
         });
         stage.addActor(button_left);

@@ -13,13 +13,13 @@ import com.mygdx.mrnom.Assets;
 import com.mygdx.mrnom.MrNom;
 
 /**
- * Help screen - page 2
+ * Help screen - page 3
  */
-public class Help2 extends ScreenAdapter {
+public class Help3Screen extends ScreenAdapter {
 
     private final Stage stage;
 
-    public Help2(final MrNom game) {
+    public Help3Screen(final MrNom game) {
         final OrthographicCamera camera = new OrthographicCamera(320, 480);
         camera.setToOrtho(false, 320, 480);
         stage = new Stage(new FitViewport(320, 480, camera));
@@ -29,20 +29,20 @@ public class Help2 extends ScreenAdapter {
         background.setPosition(0, 0);
         stage.addActor(background);
 
-        final Image help = new Image(Assets.help2);
+        final Image help = new Image(Assets.help3);
         help.setPosition(64, 124);
         stage.addActor(help);
 
-        final Image button_right = new Image(Assets.button_right);
-        button_right.setPosition(256, 0);
-        button_right.addListener(new ClickListener() {
+        final Image button_cancel = new Image(Assets.button_cancel);
+        button_cancel.setPosition(256, 0);
+        button_cancel.addListener(new ClickListener() {
             @Override
             public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                game.setScreen(new Help3(game));
+                game.setScreen(new MainMenuScreen(game));
                 return super.touchDown(event, x, y, pointer, button);
             }
         });
-        stage.addActor(button_right);
+        stage.addActor(button_cancel);
     }
 
     @Override

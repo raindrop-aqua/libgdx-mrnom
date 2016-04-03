@@ -12,18 +12,20 @@ import com.mygdx.mrnom.MrNom;
 import com.mygdx.mrnom.actors.World;
 
 /**
- * Game screen
+ * GameScreen screen
  */
-public class Game extends ScreenAdapter {
+public class GameScreen extends ScreenAdapter {
 
     private final Stage stage;
     private final World world;
 
-    public Game(final MrNom game) {
+    public GameScreen(final MrNom game) {
         final OrthographicCamera camera = new OrthographicCamera(320, 480);
         camera.setToOrtho(false, 320, 480);
         stage = new Stage(new FitViewport(320, 480, camera));
         Gdx.input.setInputProcessor(stage);
+
+        world = new World();
     }
 
     private void updateRunning(float delta) {
