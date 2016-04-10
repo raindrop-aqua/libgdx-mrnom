@@ -37,9 +37,9 @@ public class HighScoresScreen extends ScreenAdapter {
         final Image button_left = new Image(Assets.button_left);
         button_left.setPosition(0, 0);
         button_left.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
+            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
                 game.setScreen(new MainMenuScreen(game));
+                return super.touchDown(event, x, y, pointer, button);
             }
         });
         stage.addActor(button_left);
@@ -75,7 +75,7 @@ public class HighScoresScreen extends ScreenAdapter {
 
     @Override
     public void render(float delta) {
-        Gdx.gl.glClearColor(1, 0, 0, 1);
+        Gdx.gl.glClearColor(1, 1, 1, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
         stage.act(Gdx.graphics.getDeltaTime());

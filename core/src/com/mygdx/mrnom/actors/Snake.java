@@ -35,7 +35,6 @@ public class Snake {
         if (direction < UP) {
             direction = RIGHT;
         }
-
     }
 
     public void eat() {
@@ -61,14 +60,14 @@ public class Snake {
         if (direction == UP) {
             head.y -= 1;
         } else if (direction == LEFT) {
-            head.x -= 1;
+            head.x += 1;
         } else if (direction == DOWN) {
             head.y += 1;
         } else if (direction == RIGHT) {
-            head.x += 1;
+            head.x -= 1;
         }
 
-        // if gone to the outside the worlde.
+        // if gone to the outside the world.
         if (head.x < 0) {
             head.x = 9;
         }
@@ -78,7 +77,7 @@ public class Snake {
         if (head.y < 0) {
             head.y = 12;
         }
-        if (head.y < 12) {
+        if (head.y > 12) {
             head.y = 0;
         }
     }

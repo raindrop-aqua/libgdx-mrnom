@@ -4,6 +4,8 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Preferences;
 import com.badlogic.gdx.utils.Array;
 
+import java.util.Comparator;
+
 /**
  * Game settings
  */
@@ -14,9 +16,13 @@ public class Settings {
     private static final String KEY_SOUND_ENABLED = "soundEnabled";
     private static final String KEY_HIGH_SCORE = "highScore";
 
-    /** sound enable */
+    /**
+     * sound enable
+     */
     public static boolean soundEnabled = true;
-    /** high scores */
+    /**
+     * high scores
+     */
     public static Integer[] highscores = new Integer[]{100, 80, 50, 30, 10};
 
 
@@ -44,7 +50,12 @@ public class Settings {
     public static void addScore(int score) {
         Array<Integer> list = new Array<Integer>(highscores);
         list.add(score);
-        list.sort();
+        list.sort(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer t1, Integer t2) {
+                return t1.compareTo(t2) * -1;
+            }
+        });
         list.truncate(5);
         highscores = list.toArray();
     }

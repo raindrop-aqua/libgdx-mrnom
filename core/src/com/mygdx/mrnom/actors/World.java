@@ -7,26 +7,36 @@ import java.util.Random;
  */
 public class World {
 
-    /** Worldの幅 */
-    static final int WORLD_WIDTH = 10;
-    /** Worldの高さ */
-    static final int WORLD_HEIGHT = 13;
-    /** Stainを食べた時のスコアの加算値 */
-    static final int SCORE_INCREMENT = 10;
-    /** 時間間隔 初期値 */
-    static final float TICK_INITIAL = 0.5f;
-    /** 時間間隔 減算値 */
-    static final float TICK_DECREMENT = 0.05f;
+    /**
+     * Worldの幅
+     */
+    private static final int WORLD_WIDTH = 10;
+    /**
+     * Worldの高さ
+     */
+    private static final int WORLD_HEIGHT = 13;
+    /**
+     * Stainを食べた時のスコアの加算値
+     */
+    private static final int SCORE_INCREMENT = 10;
+    /**
+     * 時間間隔 初期値
+     */
+    private static final float TICK_INITIAL = 0.5f;
+    /**
+     * 時間間隔 減算値
+     */
+    private static final float TICK_DECREMENT = 0.05f;
 
     public Snake snake;
     public Stain stain;
     public boolean isGameOver = false;
     public int score = 0;
 
-    boolean fields[][] = new boolean[WORLD_WIDTH][WORLD_HEIGHT];
-    Random random = new Random(System.currentTimeMillis());
-    float tickTime = 0;
-    static float tick = TICK_INITIAL;
+    private boolean fields[][] = new boolean[WORLD_WIDTH][WORLD_HEIGHT];
+    private Random random = new Random(System.currentTimeMillis());
+    private float tickTime = 0;
+    private static float tick = TICK_INITIAL;
 
     public World() {
         snake = new Snake();
@@ -34,6 +44,35 @@ public class World {
     }
 
     private void placeStain() {
+        // field init.
+        for (int x = 0; x < WORLD_WIDTH; x++) {
+            for (int y = 0; y < WORLD_HEIGHT; y++) {
+                fields[x][y] = false;
+            }
+        }
+
+        int len = snake.parts.size();
+        for (int i = 0; i < len; i++) {
+            SnakePart part = snake.parts.get(i);
+            fields[part.x][part.y] = true;
+        }
+
+        int stainX = random.nextInt(WORLD_WIDTH);
+        int stainY = random.nextInt(WORLD_HEIGHT);
+        while (true) {
+            if (!fields[stainX][stainY]) {
+                break;
+            }
+            stainX += 1;
+            if (stainX >= WORLD_WIDTH) {
+                stainX = 0;
+                stainY += 1;
+                if (stainY >= WORLD_WIDTH) {
+                    stainY = 0;
+                }
+            }
+        }
+        stain = new Stain(stainX, stainY, random.nextInt(3));
     }
 
     public void update(float deltaTime) {
@@ -45,17 +84,28 @@ public class World {
 
         while (tickTime > tick) {
             tickTime -= tick;
-            snake.advance();;
+            snake.advance();
+
             if (snake.checkBitten()) {
                 isGameOver = true;
                 return;
             }
 
-
-
-
+            SnakePart head = snake.parts.get(0);
+            if (head.x == stain.x && head.y == stain.y) {
+                score += SCORE_INCREMENT;
+                snake.eat();
+                System.out.println("eat");
+                if (snake.parts.size() == WORLD_WIDTH * WORLD_HEIGHT) {
+                    isGameOver = true;
+                    return;
+                } else {
+                    placeStain();
+                }
+                if (score % 100 == 0 && tick - TICK_DECREMENT > 0) {
+                    tick -= TICK_DECREMENT;
+                }
+            }
         }
-
-
     }
 }

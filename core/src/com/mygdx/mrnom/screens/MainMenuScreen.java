@@ -38,6 +38,13 @@ public class MainMenuScreen extends ScreenAdapter {
 
         final Image play = new Image(Assets.label_play);
         play.setPosition(64, 212);
+        play.addListener(new ClickListener() {
+            @Override
+            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
+                game.setScreen(new GameScreen(game));
+                return super.touchDown(event, x, y, pointer, button);
+            }
+        });
         stage.addActor(play);
 
         final Image highscore = new Image(Assets.label_highscore);
@@ -86,7 +93,7 @@ public class MainMenuScreen extends ScreenAdapter {
 
     @Override
     public void render(float delta) {
-        Gdx.gl.glClearColor(1, 0, 0, 1);
+        Gdx.gl.glClearColor(1, 1, 1, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
         stage.act(Gdx.graphics.getDeltaTime());
