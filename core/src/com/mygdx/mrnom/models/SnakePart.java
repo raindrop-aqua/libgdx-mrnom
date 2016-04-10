@@ -1,4 +1,4 @@
-package com.mygdx.mrnom.actors;
+package com.mygdx.mrnom.models;
 
 /**
  * Snake(Mr.Nom) head and body

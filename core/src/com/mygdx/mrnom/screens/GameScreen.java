@@ -14,10 +14,10 @@ import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.mygdx.mrnom.Assets;
 import com.mygdx.mrnom.MrNom;
 import com.mygdx.mrnom.Settings;
-import com.mygdx.mrnom.actors.Snake;
-import com.mygdx.mrnom.actors.SnakePart;
-import com.mygdx.mrnom.actors.Stain;
-import com.mygdx.mrnom.actors.World;
+import com.mygdx.mrnom.models.Snake;
+import com.mygdx.mrnom.models.SnakePart;
+import com.mygdx.mrnom.models.Stain;
+import com.mygdx.mrnom.models.World;
 
 /**
  * GameScreen screen

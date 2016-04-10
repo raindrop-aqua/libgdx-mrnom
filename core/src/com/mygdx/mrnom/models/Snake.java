@@ -1,4 +1,4 @@
-package com.mygdx.mrnom.actors;
+package com.mygdx.mrnom.models;
 
 import java.util.ArrayList;
 import java.util.List;
